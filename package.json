@@ -1,0 +1,30 @@
+{
+    "name": "text-gm-parser",
+    "displayName": "text-gm-parser",
+    "description": "",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.61.0"
+    },
+    "publisher": "takanokana",
+    "categories": [
+        "Programming Languages"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/takanokana/text-gm-parser.git"
+    },
+    "contributes": {
+        "languages": [{
+            "id": "gmtext",
+            "aliases": ["GmText", "gmtext"],
+            "extensions": ["gm.txt"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "gmtext",
+            "scopeName": "source.gmtext",
+            "path": "./syntaxes/gmtext.tmLanguage.json"
+        }]
+    }
+}
