@@ -12,6 +12,11 @@ code --install-extension text-gm-parser-0.0.1.vsix
 ＊codeコマンドが効かない場合はコマンドぱレッドで`Shell Command: Install 'code' command in PAT`を選択して
 パスを通してください。
 
+## ビルド
+```
+npx vsce package
+```
+
 ## シンタックスルール
 
 ### コメント
