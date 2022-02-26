@@ -14,14 +14,24 @@
 		"keywords": {
 			"patterns": [
                 {
+                    "comment": "@br 改行",
                     "name": "entity.name.section.gmtext",
                     "match": "^@br"
                 },
                 {
-                    "name": "entity.name.tag.gmtext",
-                    "match": "^@.*"
+                    "comment": "コマンド引数",
+                    "match": "^(@[^ ]+)[:space:]?(.+=.+)?",
+                    "captures": {
+                        "1": {
+                            "name": "entity.name.function.gmtext"
+                        },
+                        "2": {
+                            "name": "entity.name.type.gmtext"
+                        }
+                    }
                 },
                 {
+                    "commnet": "コメントコマンド",
                     "name": "comment.line.number-sign.gmtext",
                     "match": "^# (@.*)",
                     "captures": {
@@ -31,6 +41,7 @@
                     }
                 },
                 {
+                    "comment":"コメント",
                     "name": "comment.line.number-sign.gmtext",
                     "match": "^#.*"
 			    }
